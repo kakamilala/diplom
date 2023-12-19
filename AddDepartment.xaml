@@ -1,0 +1,52 @@
+﻿<Window x:Class="alimak.AddDepartment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:alimak"
+        mc:Ignorable="d"
+        Title="AddDepartment" Height="300" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True">
+    <Grid Background="AliceBlue" Loaded="Window_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontSize="30" TextAlignment="Center" Name="title">Добавить цех</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="25" Margin="10 0 0 0">Начальник цеха</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="25" Margin="10 0 0 0">№ цеха</TextBlock>
+
+
+
+            <ComboBox x:Name="user" Grid.Row="1" Grid.Column="1" FontSize="20" Margin=" 0 0 10 1" DisplayMemberPath="FIO"  ItemsSource="{Binding}">
+            </ComboBox>
+            <TextBox x:Name="iddep" Grid.Row="0" Grid.Column="1" FontSize="20" Margin=" 0 0 10 1"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddDepButton" Grid.Row="2" Grid.Column="1" FontSize="25" Background="SlateGray" Click="AddDepButton_Click">Добавить</Button>
+            <Button x:Name="ChangeDepButton" Grid.Row="2" Grid.Column="0" FontSize="25" Background="SlateGray" Click="ChangeDepButton_Click">Сохранить</Button>
+            <Button x:Name="RemoveDepButton" Grid.Row="2" Grid.Column="2" FontSize="25" Background="SlateGray" Click="RemoveDepButton_Click">Удалить</Button>
+
+        </Grid>
+    </Grid>
+</Window>

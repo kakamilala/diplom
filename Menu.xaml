@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="alimak.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:alimak"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="880">
+    <Grid Background="AliceBlue">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"
+               
+          HorizontalAlignment="Left"
+              Background="SlateGray">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" x:Name="AccountButton" Background="SlateGray" Click="AccountButton_Click"  BorderThickness="0,1,1,1">
+                <TextBlock TextWrapping="Wrap">Личный кабинет</TextBlock>
+            </Button>
+            <Button Grid.Row="1" x:Name="ProjectsButton" Background="SlateGray" Click="ProjectsButton_Click" BorderThickness="0,1,1,1">Проекты</Button>
+            <Button Grid.Row="2" x:Name="TimetableButton" Background="SlateGray" Click="TimetableButton_Click" BorderThickness="0,1,1,1">График</Button>
+            <Button Grid.Row="3" x:Name="EmploeesButton" Background="SlateGray" Click="EmploeesButton_Click" BorderThickness="0,1,1,1">Сотрудники</Button>
+            <Button Grid.Row="5" x:Name="ReportsButton" Background="SlateGray"  BorderThickness="0,1,1,1" Visibility="Collapsed">Отчеты</Button>
+            <Button Grid.Row="4" x:Name="DepartmentssButton" Background="SlateGray" Click="DepartmentssButton_Click"  BorderThickness="0,1,1,1" >Цехи</Button>
+            <Button Grid.Row="6" x:Name="Exit" Background="Black" Foreground="SlateGray" Click="Exit_Click"  BorderThickness="0,0,1,1">Выйти</Button>
+        </Grid>
+        <Grid Grid.Column="1" x:Name="content">
+            <TextBlock FontSize="50" TextAlignment="Center" VerticalAlignment="Center">Добро пожаловать!</TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

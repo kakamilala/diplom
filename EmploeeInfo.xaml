@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="alimak.EmploeeInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:alimak"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="fio" Grid.Row="0" FontSize="38" Margin="10 0">*Фамилия Имя Отчество*</TextBlock>
+        <Grid Grid.Row="1">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Должность:</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Дата рождения:</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Телефон:</TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Пол:</TextBlock>
+                <TextBlock Grid.Row="4" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Email:</TextBlock>
+                <TextBlock Grid.Row="5" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Логин:</TextBlock>
+                <TextBlock Grid.Row="6" Grid.Column="0" FontSize="20" Margin="10 0" VerticalAlignment="Center">Пароль:</TextBlock>
+
+                <TextBlock x:Name="position" Grid.Row="0" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="birthday" Grid.Row="1" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="phone" Grid.Row="2" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="gender" Grid.Row="3" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="email" Grid.Row="4" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="login" Grid.Row="5" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="password" Grid.Row="6" Grid.Column="1" FontSize="25" Margin="10 0" VerticalAlignment="Center"></TextBlock>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="DeleteEmpButton" Grid.Column="1" FontSize="25" Background="SlateGray" Click="DeleteEmpButton_Click">Удалить</Button>
+            <Button x:Name="ChangeEmpButton" Grid.Column="0" FontSize="25" Background="SlateGray" Click="ChangeEmpButton_Click">Изменить</Button>
+
+        </Grid>
+
+
+    </Grid>
+</UserControl>
